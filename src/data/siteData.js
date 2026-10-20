@@ -312,11 +312,6 @@ export const services = [
 
 export const teamMembers = [
   {
-    name: "Rashid Khan",
-    role: "Managing Director",
-    image: "/assets/imgs/team/rashid.jpg"
-  },
-  {
     name: "Sohel Khan",
     role: "Graphic Designer",
     image: "/assets/imgs/team/sohel.jpg"
@@ -340,6 +335,11 @@ export const teamMembers = [
     name: "Faisal Khan",
     role: "Digital Marketing",
     image: "/assets/imgs/team/faisal.jpg"
+  },
+  {
+    name: "Rashid Khan",
+    role: "Managing Director",
+    image: "/assets/imgs/team/rashid.jpg"
   }
 ];
 

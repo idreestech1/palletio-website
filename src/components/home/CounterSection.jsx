@@ -25,42 +25,41 @@ export default function CounterSection() {
   ];
 
   return (
-    <section className="counter-area section-spacing-bottom mt-60">
+    <section className="palletio-counter-section">
       <div className="container">
-        <div className="counter-area-inner">
-          <div className="section-header">
-            <div className="subtitle-wrapper">
-              <span className="section-subtitle">
-                <span>We</span> <br /> Proudly
-              </span>
-            </div>
-            <div className="content-last">
-              <div className="section-title-wrapper">
-                <div className="title-wrapper">
-                  <h2 className="section-title">
-                    <span>Design.</span> Build. Elevate.
-                  </h2>
-                </div>
-              </div>
-              <div className="text-wrapper">
-                <p className="text">
-                  We craft purpose-driven experiences with a bold creative mindset and a modern digital approach.
-                </p>
-              </div>
-            </div>
+        {/* Section Header */}
+        <div className="palletio-counter-header">
+          <div className="palletio-counter-col-sub">
+            <span className="palletio-counter-subtitle">
+              <span>We</span> <br /> Proudly
+            </span>
           </div>
 
-          <div className="counter-wrapper-box">
-            <div className="counter-wrapper">
-              {stats.map((stat, idx) => (
-                <div className="counter-item" key={idx}>
-                  <h3 className="number wc-counter">{stat.number}</h3>
-                  <p className="text">
-                    <span>{stat.title}</span> <br /> {stat.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+          <div className="palletio-counter-col-title">
+            <h2 className="palletio-counter-main-title">
+              <span>Design.</span>
+              <span>Build.</span>
+              <span>Elevate.</span>
+            </h2>
+          </div>
+
+          <div className="palletio-counter-col-desc">
+            <p className="palletio-counter-description">
+              We craft purpose-driven experiences with a bold creative mindset and a modern digital approach.
+            </p>
+          </div>
+        </div>
+
+        {/* 4 Oval Stat Cards */}
+        <div className="palletio-counter-cards-wrapper">
+          <div className="palletio-counter-cards-grid">
+            {stats.map((stat, idx) => (
+              <div className="palletio-oval-card" key={idx}>
+                <div className="palletio-oval-number">{stat.number}</div>
+                <h3 className="palletio-oval-title">{stat.title}</h3>
+                <p className="palletio-oval-desc">{stat.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

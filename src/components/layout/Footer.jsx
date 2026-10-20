@@ -85,7 +85,7 @@ export default function Footer() {
             </form>
           </div>
 
-          <div className="footer-widget-wrapper minW300">
+          <div className="footer-widget-wrapper">
             <h2 className="title">Term & Conditions</h2>
             <ul className="footer-nav-list">
               <li><Link to="/terms-and-conditions">Terms & Conditions</Link></li>
@@ -94,7 +94,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="footer-widget-wrapper minW300">
+          <div className="footer-widget-wrapper">
             <h2 className="title">Social Media</h2>
             <ul className="social-links">
               <li>

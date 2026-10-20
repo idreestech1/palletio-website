@@ -5,6 +5,7 @@ import { siteInfo } from '../../data/siteData';
 export default function Header({ onOpenOffcanvas }) {
   const { pathname } = useLocation();
   const isLightHeader =
+    pathname === '/' ||
     pathname.startsWith('/contact') ||
     pathname.startsWith('/service') ||
     [
@@ -54,21 +55,23 @@ export default function Header({ onOpenOffcanvas }) {
             </nav>
           </div>
 
-          <div className="header__button">
-            <Link to="/contact-us" className="wc-btn wc-btn-primary btn-text-flip">
-              <span data-text="Let's Talk">Let's Talk</span>
-            </Link>
-          </div>
+          <div className="header__actions d-flex align-items-center gap-2 gap-sm-3">
+            <div className="header__button">
+              <Link to="/contact-us" className="wc-btn wc-btn-primary btn-text-flip">
+                <span data-text="Let's Talk">Let's Talk</span>
+              </Link>
+            </div>
 
-          <div className="header__navicon d-xl-none">
-            <button
-              onClick={onOpenOffcanvas}
-              className="open-offcanvas"
-              aria-label="Open navigation menu"
-              type="button"
-            >
-              <i className="fa-solid fa-bars"></i>
-            </button>
+            <div className="header__navicon">
+              <button
+                onClick={onOpenOffcanvas}
+                className="open-offcanvas"
+                aria-label="Open navigation menu"
+                type="button"
+              >
+                <i className="fa-solid fa-bars"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
